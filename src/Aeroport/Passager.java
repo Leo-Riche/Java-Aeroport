@@ -52,7 +52,6 @@ public class Passager {
         this.bagage = bagage;
     }
 
-    /** Inscrit ce passager dans la liste des passagers du vol. */
     public void ajouterVol(Vol vol) {
         if (vol != null && passeport == true) {
             vol.ajouterPassager(this);
@@ -61,7 +60,6 @@ public class Passager {
         }
     }
 
-    /** Retire ce passager de la liste des passagers du vol. */
     public void retirerVol(Vol vol) {
         if (vol != null) {
             vol.retirerPassager(this);

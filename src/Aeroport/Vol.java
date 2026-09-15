@@ -109,24 +109,20 @@ public class Vol {
         return this.personnels;
     }
 
-    /** Ajoute un passager au vol, sans doublon. */
     public void ajouterPassager(Passager passager) {
         if (passager != null && !this.passagers.contains(passager)) {
             this.passagers.add(passager);
         }
     }
 
-    /** Retire un passager du vol. */
     public void retirerPassager(Passager passager) {
         this.passagers.remove(passager);
     }
 
-    /** Retourne le nombre de passagers du vol. */
     public int getNombrePassagers() {
         return this.passagers.size();
     }
 
-    /** Definit le terminal de depart du vol et fait pointer ce terminal sur le vol. */
     public void ajouterTerminal(Terminal terminal) {
         this.depart = terminal;
         if (terminal != null) {
@@ -134,7 +130,6 @@ public class Vol {
         }
     }
 
-    /** Retire le terminal de depart du vol. */
     public void retirerTerminal() {
         if (this.depart != null) {
             if (this.depart.getVol() == this) {
@@ -144,14 +139,12 @@ public class Vol {
         }
     }
 
-    /** Affecte un membre du personnel au vol, sans doublon. */
     public void ajouterPersonnel(Personnel personnel) {
         if (personnel != null && !this.personnels.contains(personnel)) {
             this.personnels.add(personnel);
         }
     }
 
-    /** Retire un membre du personnel du vol. */
     public void retirerPersonnel(Personnel personnel) {
         this.personnels.remove(personnel);
     }

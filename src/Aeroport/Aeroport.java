@@ -76,21 +76,18 @@ public class Aeroport {
         }
     }
 
-    /** Retire un terminal de l'aeroport et le detache. */
     public void retirerTerminal(Terminal terminal) {
         if (this.terminals.remove(terminal)) {
             terminal.setAeroport(null);
         }
     }
 
-    /** Ajoute un membre du personnel a l'aeroport, sans doublon. */
     public void ajouterPersonnel(Personnel personnel) {
         if (personnel != null && !this.personnels.contains(personnel)) {
             this.personnels.add(personnel);
         }
     }
 
-    /** Retire un membre du personnel de l'aeroport. */
     public void retirerPersonnel(Personnel personnel) {
         this.personnels.remove(personnel);
     }
