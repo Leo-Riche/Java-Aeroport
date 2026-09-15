@@ -1,11 +1,15 @@
 package Aeroport;
 
 public class Terminal {
+    private static int CPT = 1;
+
+    int id;
     private Vol vol;
     private String nom;
     private Aeroport aeroport;
 
     public Terminal(Vol vol, String nom, Aeroport aeroport) {
+        this.id = CPT++; // équivalent à this.id = CPT et CPT = CPT + 1
         this.vol = vol;
         this.nom = nom;
         this.aeroport = aeroport;

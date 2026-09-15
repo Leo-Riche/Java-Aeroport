@@ -33,8 +33,14 @@ public class Avion {
         return this.compagnie;
     }
 
+    /** Ajouter un avion a une compagnie. */
     public void setCompagnie(Compagnie compagnie) {
         this.compagnie = compagnie;
+    }
+
+    /** Detache l'avion de sa compagnie. */
+    public void retirerCompagnie() {
+        this.compagnie = null;
     }
 
     public boolean isEnVol() {
@@ -53,15 +59,6 @@ public class Avion {
         this.capacite = capacite;
     }
 
-    /** Rattache l'avion a une compagnie. */
-    public void ajouterCompagnie(Compagnie compagnie) {
-        this.compagnie = compagnie;
-    }
-
-    /** Detache l'avion de sa compagnie. */
-    public void retirerCompagnie() {
-        this.compagnie = null;
-    }
 
     /** Affecte cet avion au vol. */
     public void ajouterVol(Vol vol) {

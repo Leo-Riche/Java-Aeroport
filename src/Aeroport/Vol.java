@@ -9,7 +9,6 @@ public class Vol {
     private int id;
     private Compagnie compagnie;
     private Avion avion;
-    private int nombrePassager;
     private List<Passager> passagers;
     private String heureDepart;
     private String heureArrivee;
@@ -19,12 +18,11 @@ public class Vol {
     private String duree;
     private List<Personnel> personnels;
 
-    public Vol(Compagnie compagnie, Avion avion, int nombrePassager, String heureDepart, String heureArrivee,
+    public Vol(Compagnie compagnie, Avion avion, String heureDepart, String heureArrivee,
             Aeroport destination, Terminal depart, float prix, String duree) {
         this.id = CPT++;
         this.compagnie = compagnie;
         this.avion = avion;
-        this.nombrePassager = nombrePassager;
         this.heureDepart = heureDepart;
         this.heureArrivee = heureArrivee;
         this.destination = destination;
@@ -53,14 +51,6 @@ public class Vol {
 
     public void setAvion(Avion avion) {
         this.avion = avion;
-    }
-
-    public int getNombrePassager() {
-        return this.nombrePassager;
-    }
-
-    public void setNombrePassager(int nombrePassager) {
-        this.nombrePassager = nombrePassager;
     }
 
     public List<Passager> getPassagers() {
@@ -129,6 +119,11 @@ public class Vol {
     /** Retire un passager du vol. */
     public void retirerPassager(Passager passager) {
         this.passagers.remove(passager);
+    }
+
+    /** Retourne le nombre de passagers du vol. */
+    public int getNombrePassagers() {
+        return this.passagers.size();
     }
 
     /** Definit le terminal de depart du vol et fait pointer ce terminal sur le vol. */

@@ -54,8 +54,10 @@ public class Passager {
 
     /** Inscrit ce passager dans la liste des passagers du vol. */
     public void ajouterVol(Vol vol) {
-        if (vol != null) {
+        if (vol != null && passeport == true) {
             vol.ajouterPassager(this);
+        } else {
+            System.out.println("Go back to your country !");
         }
     }
 
